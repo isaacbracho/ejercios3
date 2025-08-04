@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Valida una contraseña basándose en varios criterios.
- *
- * @param string $contrasena La contraseña a validar.
- * @return bool Retorna true si la contraseña es válida, false en caso contrario.
- */
+
 function validar_contrasena($contrasena) {
   
     if (strlen($contrasena) < 8) {
@@ -53,5 +48,6 @@ echo "--------------------------\n";
 echo "Contraseña: 'PassWordSeguro8'\n";
 validar_contrasena("PassWordSeguro8"); 
 echo "--------------------------\n";
+
 
 ?>
