@@ -7,27 +7,13 @@ $catalogo = [
     ["nombre" => "Teclado", "precio" => 75, "stock" => 30]
 ];
 
-/**
- * 2. Agrega un nuevo producto al catálogo.
- *
- * @param array &$catalogo El array del catálogo de productos.
- * @param string $nombre El nombre del producto.
- * @param float $precio El precio del producto.
- * @param int $stock La cantidad en stock del producto.
- * @return void
- */
+
 function agregar_producto(&$catalogo, $nombre, $precio, $stock) {
     $catalogo[] = ["nombre" => $nombre, "precio" => $precio, "stock" => $stock];
     echo "Producto '$nombre' agregado exitosamente.\n";
 }
 
-/**
- * 3. Busca un producto por su nombre en el catálogo.
- *
- * @param array $catalogo El array del catálogo de productos.
- * @param string $nombre_buscado El nombre del producto a buscar.
- * @return array|null El producto encontrado o null si no se encuentra.
- */
+
 function buscar_producto($catalogo, $nombre_buscado) {
     foreach ($catalogo as $producto) {
         if (strtolower($producto["nombre"]) === strtolower($nombre_buscado)) {
@@ -37,12 +23,7 @@ function buscar_producto($catalogo, $nombre_buscado) {
     return null;
 }
 
-/**
- * 4. Calcula el valor total de todo el stock en el inventario.
- *
- * @param array $catalogo El array del catálogo de productos.
- * @return float El valor total del stock.
- */
+
 function calcular_total_valor_stock($catalogo) {
     $total_valor = 0;
     foreach ($catalogo as $producto) {
@@ -82,5 +63,6 @@ if ($producto_no_encontrado) {
 echo "\n--- Valor Total del Stock ---\n";
 $valor_total = calcular_total_valor_stock($catalogo);
 echo "El valor total de todo el inventario es: $" . $valor_total . "\n";
+
 
 ?>
